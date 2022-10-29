@@ -1,0 +1,17 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/sandbox.ts",
+  "scripts": {
+    "start": "npm run build && node dist/sandbox.js",
+    "build": "rollup -c"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "smite-api": "file:..",
+    "vite": "^4.3.3"
+  }
+}

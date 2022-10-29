@@ -1,0 +1,38 @@
+name: Test Coverage Report
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+jobs:
+  coverage:
+    name: Coverage Report
+    runs-on: ubuntu-latest
+    # Integration tests make real API calls and this tries to limit making too many calls
+    # Only running Integration tests on commits triggered by semantic release
+    if: "contains(github.event.head_commit.message, 'semantic-release')"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Install Node 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16.x"
+      - name: Install Dependencies
+        run: npm ci
+      - name: Run Coverage Report
+        uses: ArtiomTr/jest-coverage-report-action@v2
+        env:
+          DEV_ID: ${{ secrets.DEV_ID }}
+          AUTH_KEY: ${{ secrets.AUTH_KEY }}
+      - name: Create Jest Coverage badges
+        run: npm run test:badges
+      - name: Deploy Test Coverage Report
+        uses: JamesIves/github-pages-deploy-action@v4.3.0
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: coverage # The folder the action should deploy.

@@ -1,0 +1,18 @@
+# ignore node modules
+node_modules
+
+# ignore vscode user workspace settings
+.vscode/settings.json
+
+# ignore compiled babel
+lib
+dist
+
+# ignore dev API key
+.env
+
+# ignore jest generated coverage reports
+coverage
+
+# ignore local notes
+notes.*
