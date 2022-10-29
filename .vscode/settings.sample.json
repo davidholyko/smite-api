@@ -1,0 +1,21 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#06351E",
+    "titleBar.activeBackground": "#084A2A",
+    "titleBar.activeForeground": "#EEFDF6"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "better-comments.multilineComments": true,
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 120,
+  "files.exclude": {
+    "**/.git": true,
+    "**/dist": true,
+    "**/node_modules": true
+  }
+}
