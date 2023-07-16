@@ -8,7 +8,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "moduleResolution": "NodeNext",
-    "typeRoots": ["src/types.ts"],
+    "typeRoots": ["src"],
+    "declaration": true,
+    "declarationDir": "dist"
   },
-  "exclude": ["node_modules", "sandbox", "test"],
+  "exclude": ["node_modules", "sandbox", "test", "dist"],
+  "include": ["src", "index.d.ts"]
 }

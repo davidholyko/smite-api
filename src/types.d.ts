@@ -565,4 +565,4 @@ export interface PlayerIdByNameRecord {
   ret_msg: string | null;
 }
 
-export {};
+export declare module 'smite-api';

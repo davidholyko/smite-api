@@ -1,20 +1,14 @@
 {
   "name": "smite-api",
-  "version": "2.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": "David Ko",
   "license": "ISC",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "repository": {
     "url": "https://github.com/davidholyko/smite-api.git"
   },
-  "exports": {
-    ".": {
-      "development": "./src/index.ts",
-      "production": "./dist/index.js"
-    }
-  },
-  "types": "./src/types.d.ts",
   "files": [
     "/dist"
   ],

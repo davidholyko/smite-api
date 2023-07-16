@@ -1,5 +1,5 @@
 import { Command } from 'commander';
-import { SmiteApi } from '../../src';
+import { SmiteApi } from 'smite-api';
 
 const program = new Command();
 

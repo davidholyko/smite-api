@@ -767,4 +767,4 @@ export class SmiteApi {
   }
 }
 
-export default SmiteApi;
+export type SmiteAPI = typeof SmiteApi;
